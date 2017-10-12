@@ -1,5 +1,5 @@
 # POSSearching
-What is POSSearching?
+### What is POSSearching?
 
 POS Searching is a kind of searching that includes Part Of Speech (POS) information.
 For example, return an index to all sentences having the word 'you' as the subject.
@@ -14,7 +14,7 @@ The spaths can be combined so that multiple POS's can be specified: return an in
 sentences have 'boy' as the noun of the subject and 'ball' as the noun of a predicate object.
 Such a sentence might be "The boy hit the ball."
 
-Why might one want to do POSSearching?
+### Why might one want to do POSSearching?
 
 Why would want to do POS searching?  The hypothetical answer is to increase search precision.
 The 'hypothetical' refers to the fact that this result is yet to be tested.
