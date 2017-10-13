@@ -1,5 +1,5 @@
-# POSSearching
-### What is POSSearching?
+# POS Searching
+### What is POS Searching?
 
 POS Searching is a kind of searching that includes Part Of Speech (POS) information.
 For example, return an index to all sentences having the word 'you' as the subject.
