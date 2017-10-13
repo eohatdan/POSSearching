@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="dataset">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="FORMSPRINGID"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FORMSPRINGID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="BIO"/>
+        <xs:element ref="DATE"/>
+        <xs:element ref="LOCATION"/>
+        <xs:element ref="USERID"/>
+        <xs:element maxOccurs="unbounded" ref="POST"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BIO" type="xs:string"/>
+  <xs:element name="DATE" type="xs:integer"/>
+  <xs:element name="LOCATION" type="xs:string"/>
+  <xs:element name="USERID" type="xs:NCName"/>
+  <xs:element name="POST">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="TEXT"/>
+        <xs:element ref="ASKER"/>
+        <xs:element maxOccurs="unbounded" ref="LABELDATA"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TEXT" type="xs:string"/>
+  <xs:element name="ASKER" type="xs:string"/>
+  <xs:element name="LABELDATA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ANSWER"/>
+        <xs:element ref="CYBERBULLYWORD"/>
+        <xs:element ref="SEVERITY"/>
+        <xs:element ref="OTHER"/>
+        <xs:element ref="WORKTIME"/>
+        <xs:element ref="WORKERID"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ANSWER" type="xs:string"/>
+  <xs:element name="CYBERBULLYWORD" type="xs:string"/>
+  <xs:element name="SEVERITY" type="xs:string"/>
+  <xs:element name="OTHER" type="xs:string"/>
+  <xs:element name="WORKTIME" type="xs:integer"/>
+  <xs:element name="WORKERID" type="xs:NCName"/>
+</xs:schema>
