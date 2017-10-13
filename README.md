@@ -23,3 +23,29 @@ are interested in all sentences that match the regular expression '/.*boy\s.*hit
 This expression would match the sentence, 'The boy hit the ball.'  However, it would also match
 'My boy was a hit at the ball.' or 'There was a tennis player whose ball boy was hit by a ball.'
 
+### Development Notes
+
+I am using two separate development tools:
+  1.) oXygen XML editor
+  2.) Jupyter Notebook
+I use the oXygen XML editor to create the data structure files for sentences and questions and to
+generate the .xsd files to validate the structure.  I also use XQuery to try out queries against 
+the test sentences.
+
+I use Jupyter Notebook to develop what I call form-class functions.  These functions implement the
+various form-classes used to generate sentences and questions.  Example: nounPhrase is a function that
+generates the XML structure for a nounPhrase.  The function call:
+
+nounPhrase(articlex='the', adjectivex= 'little', nounx='boy')
+
+generates the following XML:
+
+<nounPhrase>
+     <article>the</article>
+	 <adjective>little</adjective>
+<noun>boy</noun>
+
+ All the form-classes are written as Python functions and are stored in a module file (language.py).
+ 
+ 
+
