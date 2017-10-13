@@ -39,12 +39,13 @@ generates the XML structure for a nounPhrase.  The function call:
 nounPhrase(articlex='the', adjectivex= 'little', nounx='boy')
 
 generates the following XML:
-
+```` xml
 <nounPhrase>
      <article>the</article>
-	 <adjective>little</adjective>
-<noun>boy</noun>
-
+     <adjective>little</adjective>
+     <noun>boy</noun>
+</nounPhrase>
+````
  All the form-classes are written as Python functions and are stored in a module file (language.py).
  
  
