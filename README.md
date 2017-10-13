@@ -15,13 +15,23 @@ sentences have 'boy' as the noun of the subject and 'ball' as the noun of a pred
 Such a sentence might be "The boy hit the ball."
 
 ### Why might one want to do POSSearching?
+There are two measures often in used in retrieving information: recall and precision.
+Recall refers to the percentage of documents retrieved that were predetermined to be relevant.
+Precision refers to the percentage of all documents retrieved that were deemed relevant
+Example:  Suppose 10 documents in a collection of 1000 documents were judged as relevant to a particular query.
+The query retrieved 20 documents, 5 of which were among those predetermined as relevant.  The recall is 5 of 10 relevant documents
+or 50%.  The precision of the query is 5 of 20, or 25%.
 
-Why would want to do POS searching?  The hypothetical answer is to increase search precision.
+The hypothetical answer to why one might be interested in POS searching is to increase search precision.
 The 'hypothetical' refers to the fact that this result is yet to be tested.
-Without including POS information, erroneous results can be obtained.  For example, suppose we
+Without including POS information, erroneous results can be obtained, thus decreasing precision.  For example, suppose we
 are interested in all sentences that match the regular expression '/.*boy\s.*hit\s.*ball.*/.
 This expression would match the sentence, 'The boy hit the ball.'  However, it would also match
 'My boy was a hit at the ball.' or 'There was a tennis player whose ball boy was hit by a ball.'
+
+Using POS Searching, the query would be: find all sentences whose subject contains a noun phrase whose text is 'boy' and whose
+predicate contains a verb phrase whose text is 'hit', and whose object phrase contains a noun whose text is 'ball'.
+The hypothesis is that POS searching will increase precision by eliminating 'false positives'.
 
 ### Development Notes
 
