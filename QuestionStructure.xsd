@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="question">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="interrogativePhrase"/>
+        <xs:element ref="adjectivePhrase"/>
+        <xs:element ref="verbPhrase"/>
+        <xs:element ref="objectPhrase"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="interrogativePhrase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="interrogative"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="interrogative">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="adjectivePhrase">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="adjective"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="verbPhrase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="verb"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="verb">
+    <xs:complexType>
+      <xs:attribute name="mood" use="required"/>
+      <xs:attribute name="number" use="required"/>
+      <xs:attribute name="tense" use="required"/>
+      <xs:attribute name="transitivity" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="objectPhrase">
+    <xs:complexType>
+      <xs:sequnce minOccurs="0">
+        <xs:element ref="nounPhrase"/>
+        <xs:element ref="pronounPhrase"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nounPhrase">
+    <xs:complexType>
+      <xs:sequence >
+        <xs:element ref="article"/>
+        <xs:element ref="adjective"/>
+        <xs:element ref="noun"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="article">
+    <xs:complexType>
+      <xs:attribute name="number" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="noun">
+    <xs:complexType>
+      <xs:attribute name="gender" use="required"/>
+      <xs:attribute name="number" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pronounPhrase">
+    <xs:complexType>
+      <xs:sequnce minOccurs="0">
+        <xs:element ref="pronoun"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pronoun">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="adjective">
+    <xs:complexType >
+      <xs:attribute name="number"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

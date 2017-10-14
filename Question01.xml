@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="QuestionStructure.xsd">
+    <interrogativePhrase>
+        <interrogative>how</interrogative>
+    </interrogativePhrase>
+    <nounPhrase>
+        <adjective>
+            <text>old</text>
+        </adjective>
+    </nounPhrase>  
+    <verbPhrase>
+        <verb>
+            <text>are</text>
+        </verb>
+    <pronounPhrase>
+        <pronoun>you</pronoun>
+    </pronounPhrase>
+            
+        
+    </verbPhrase>
+    
+</question>

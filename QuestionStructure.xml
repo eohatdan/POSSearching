@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<question>
+    <interrogativePhrase>
+        <interrogative></interrogative>
+    </interrogativePhrase>
+    <adjectivePhrase>
+            <adjective></adjective>
+    </adjectivePhrase>
+    <verbPhrase>
+            <verb number='' tense='' mood='' transitivity='' ></verb>
+    </verbPhrase>
+    <objectPhrase>
+            <nounPhrase>
+                <article number='' ></article>
+                <adjective number='' ></adjective>   
+                <noun number='' gender=''></noun>
+            </nounPhrase>
+            <pronounPhrase>
+                <pronoun></pronoun>
+            </pronounPhrase>
+    </objectPhrase>  
+</question>
